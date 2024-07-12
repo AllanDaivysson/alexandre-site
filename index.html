@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="area-foto-principal">
+            <div class="foto-principal">
+                <div class="foto">
+                    <div class="text-foto fade-in">
+                        <h2>ALEXANDRE FARIAS<br>
+                            <span class="fade-in" id="subtext">Corretor de imóveis | CRECI: 5653</span>
+                        </h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pagina-principal">
+        <div class="principal">
+            <div class="area-menu">
+                <div class="menu">
+                    <a class="options" href="">Casas</a>
+                    <a class="options options2" href="">Apartamentos</a>
+                    <a class="options options2" href="">Minha história</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="segundo-bloco">
+            <div class="frases-efeito">
+                <ul>
+                    <li class="fade-in">Encontre o lar dos seus sonhos.</li>
+                    <li class="fade-in">Transforme seus desejos em realidade.</li>
+                    <li class="fade-in">Onde a sua historia começa.</li>
+                </ul>
+            </div>
+
+            <div class="area-casas">
+                <div class="casas">
+                    <div class="barra-dos-coqueiros">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.fade-in');
+
+    function checkPosition() {
+        const windowHeight = window.innerHeight;
+        elements.forEach(element => {
+            const positionFromTop = element.getBoundingClientRect().top;
+            if (positionFromTop - windowHeight <= 0) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkPosition);
+    checkPosition(); // Para verificar a posição inicial
+});
+</script>
+
+</html>
